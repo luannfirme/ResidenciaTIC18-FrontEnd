@@ -1,134 +1,77 @@
-@media (min-width: 10px) {
-    .container {
-        display: grid;
-        gap: 5px;
-        grid-template-columns: 1fr;
-    }
-    .card {
-        height: 100%;
-    }
-    #banner {
-        margin-top: -5px;
-    }
-    #img1{
-        padding-top: 10px;
-    }
-    #img2{
-        margin-top: 10px;
-        padding-bottom: 10px;
-    }
-  }
-@media (min-width: 600px) {
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 20% ; 
-    grid-template-rows: 200px 250px 200px 50px;
-    grid-gap: 10px 5px;
-    grid-auto-rows: 100px;
-}
-#resultados {
-    grid-column-start: 2;
-    grid-column-end: -1;
-    margin-top: -5px;
-}
-#servicos {
-    margin-top: -5px;
-}
-}
-#banner {
-    background: url("../img/new_topo_princ_uesc_01.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position-y: center;
-    grid-column-start: 1;
-    grid-column-end: -1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    font-size: 30px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-#menu {
-
-    background-color: #9fd3f6;
-    color: #2c2c2c;
-    font-family: 'Open Sans', sans-serif;
-}
-#menu ul{
-    margin-top: 10px;
-}
-#noticias {
-    background-color: #9fd3f6;
-}
-#listaNoticias {
-    margin-left: 15px;
+ 
+  .container-destinos {
+    display:flex;
     padding: 10px;
-}
-#destaques {
-    background-color: #9fd3f6;
-    display: flex;
-    align-items:flex-end;
-    flex-direction: column;
-}
-img {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
-}
-#img2{
-    margin-top: 10px;
-}
-#servicos {
-    background-color: #9fd3f6;
-}
-#listaServicos {
-    margin-left: 15px;
-}
-#resultados {
-    background-color: #9fd3f6;
-    display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-#listaResultados {
-    margin: 5px;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .roteiros-viagens {
+    background-color: #ebd7ed;
+    border-radius: 20px;
     padding: 5px;
-    border: 1px solid #000;
-    width: 400px;
-}
-#rodape {
-    background-color: #010219;
-    color:#ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 40px;
-}
-a {
+    margin: 5px;
+    font-size: 12p;
+    flex-grow:0;
+    flex-basis: auto;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  .roteiros-viagens img{
+    padding: 10px;
+    width: 200px;
+    height: 150px;
+  }
+
+  .roteiro-comprar {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 64px;
+  }
+
+  button{
+    background-color: rgb(86, 230, 163);
+    color: rgb(12, 63, 2);
+    border: none;
     cursor: pointer;
-}
-.header {
-    background-color:  #090c53;
-    font-size: 20px;
-    color: #f4f4f4;
-    padding-top: 10px;
+  }
+
+  .roteiro-destino{
     text-align: center;
-    justify-content: center;
-    align-items: center;
+    font-size:x-large;
+    font-weight: bolder;
+    
+    color: #c12ab9;
+  }
+  ul {
+    color: #4f084b;
+    list-style: none;
     font-family: 'Roboto', sans-serif;
-}
-hr {
-    border: 1px solid rgb(46, 208, 253)(0, 200, 255);
-}
-p {
+  }
+  
+  ul li:before {
+    font-weight: bolder;
+    content: '✓';
+  }
+  .roteiro-preco{
+    text-align: center;
+    font-size:x-large;
+    color: #c12ab9;
+  }
+  .roteiro-obs{
+    text-align: center;
+    font-size:small;
     font-family: 'Heebo', sans-serif;
-}
+    font-weight: bolder;
+    color: #4f084b;
+  }
+  .roteiro-parcelamento{
+    text-align: center;
+    font-size:small;
+    font-weight: bolder;
+    font-family: 'Heebo', sans-serif;
+    color: #4f084b;
+  }
