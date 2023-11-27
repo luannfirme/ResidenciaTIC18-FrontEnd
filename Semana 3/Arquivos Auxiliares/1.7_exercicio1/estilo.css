@@ -1,0 +1,46 @@
+ 
+  .container-destinos {
+    display:flex;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .roteiros-viagens {
+    background-color: #ebd7ed;
+    padding: 5px;
+    margin: 5px;
+    font-size: 12p;
+    flex-grow:0;
+    flex-basis: auto;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+  }
+
+  .roteiros-viagens img{
+    width: 200px;
+    height: 150px;
+  }
+
+  .roteiro-comprar {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 64px;
+  }
+
+  button{
+    background-color: rgb(118, 73, 160);
+    color: antiquewhite;
+    border: none;
+    cursor: pointer;
+  }
+
+  .roteiro-destino{
+    text-align: center;
+    font-size:x-large;
+    font-weight: bolder;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #471489;
+  }
