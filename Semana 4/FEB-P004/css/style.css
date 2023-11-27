@@ -7,7 +7,7 @@
   }
   
   .roteiros-viagens {
-    background-color: #ebd7ed;
+    background-color: rgb(213, 185, 215);
     border-radius: 20px;
     padding: 5px;
     margin: 5px;
@@ -42,7 +42,7 @@
   .roteiro-comprar {
     margin-top: 15px;
     margin-bottom: 15px;
-    background-color: #5de656;
+    background-color: #83d87f;
     color: #0c3f02;
     border: none;
     padding: 8px;
