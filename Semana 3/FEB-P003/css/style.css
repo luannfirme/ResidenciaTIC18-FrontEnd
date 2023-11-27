@@ -1,42 +1,55 @@
- 
   .container-destinos {
-    display:flex;
-    padding: 10px;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    align-items: center;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
   }
-
+  
   .roteiros-viagens {
     background-color: #ebd7ed;
     border-radius: 20px;
     padding: 5px;
     margin: 5px;
-    font-size: 12p;
-    flex-grow:0;
-    flex-basis: auto;
+    font-size: 12px;
+    width: calc(33.33% - 20px);
+    max-width: 200px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (max-width: 1200px) {
+    .roteiros-viagens {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .roteiros-viagens {
+      width: calc(100% - 20px);
+    }
   }
 
   .roteiros-viagens img{
-    padding: 10px;
-    width: 200px;
-    height: 150px;
+    padding: 5px;
+    width: 95%;
+    height: 35%;
   }
-
+  .roteiro-botao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .roteiro-comprar {
     margin-top: 15px;
     margin-bottom: 15px;
-    margin-left: 64px;
   }
-
   button{
-    background-color: rgb(86, 230, 163);
+    background-color: rgb(93, 230, 86);
     color: rgb(12, 63, 2);
     border: none;
     cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
   }
 
   .roteiro-destino{
