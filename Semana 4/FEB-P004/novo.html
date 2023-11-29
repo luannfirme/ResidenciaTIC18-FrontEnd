@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Agência de Turísmo</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Heebo:wght@100&family=Roboto+Mono:wght@100&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-destinos"></div>
+    <br>
+    <hr>
+    <form id="formularioDestino">
+        <label for="imagemURL">URL da Imagem:</label>
+        <input type="text" id="imagemURL" name="imagemURL" placeholder="http://imagem-exemplo.com" alt="Campo para inserção de imagem" required><br><br>
+        <label for="destino">Destino:</label>
+        <input type="text" id="destino" name="destino" alt="campo para preenchimento do local de destino" required><br><br>
+        <label for="incluso1">Passagens:</label>
+        <input type="text" id="incluso1" name="incluso1" alt="campo para prenchimento sobre serviço aéreo oferecido" placeholder="Passagens" required><br><br>
+        <label for="incluso2">Quantidade de diárias:</label>
+        <input type="number"  min="0" id="incluso2" name="incluso2" alt="campo para prenchimento sobre quantidade de diárias oferecidas" placeholder="Diárias" required><br><br>
+        <label for="incluso1">Alimentação:</label>
+        <input type="text" id="incluso3" name="incluso3" alt="campo para prenchimento sobre adicionais do pacote" placeholder="Adicional" required><br><br>
+        <label for="preco">Preço:</label>
+        <input type="text" id="preco" name="preco" alt="campo para preenchimento do preço do pacote" placeholder="R$ 0,00" required><br><br>
+        <label for="taxas">Informações de Taxas:</label>
+        <input type="text" id="taxas" name="taxas" alt="campo para preenchimento sobre as taxa do pacote" placeholder="Taxas Inclusas" required><br><br>
+        <label for="parcelas">Qtd. de vezes (s/ juros):</label>
+        <input type="number" min="0" id="parcelas" name="parcelas" alt="campo para preenchimento de quantidade de parcelas aceitas" placeholder="10" required>
+        <br>
+        <button type="submit">Salvar</button>
+    </form>
+    <script src="./js/novo.js"></script>
+</body>
+
+</html>
