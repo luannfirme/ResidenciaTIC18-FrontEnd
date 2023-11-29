@@ -7,7 +7,7 @@
   }
 
   .roteiros-viagens {
-    background-color: rgb(213, 185, 215);
+    background-color: rgb(190, 181, 190);
     border-radius: 20px;
     padding: 5px;
     margin: 5px;
@@ -45,8 +45,8 @@
   .roteiro-comprar {
     margin-top: 15px;
     margin-bottom: 15px;
-    background-color: #83d87f;
-    color: #0c3f02;
+    background-color: rgb(52, 87, 50);
+    color: #cacaca;
     border: none;
     padding: 8px;
     border-radius: 5px;
@@ -54,12 +54,12 @@
 
   .roteiro-comprar:hover {
     cursor: pointer;
-    background: #4fdd09;
+    background: #5a7945;
   }
 
   .roteiro-comprar:active {
-    background: #71d43f;
-    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.5);
+    background: #5a7945;
+    box-shadow: 0px 5px 0px 0px rgba(106, 104, 104, 0.5);
     transition-duration: 0.5s;
     transform: translate(0px, 25%);
 
@@ -69,7 +69,7 @@
     text-align: center;
     font-size: x-large;
     font-weight: bolder;
-    color: #c12ab9;
+    color: #000000;
   }
 
   ul {
@@ -86,7 +86,7 @@
   .roteiro-preco {
     text-align: center;
     font-size: x-large;
-    color: #c12ab9;
+    color: #ad4406;
   }
 
   .roteiro-obs {
@@ -118,7 +118,7 @@
   }
 
   #btn-cadastro input {
-    background-color: #199319;
+    background-color: #191919;
     color: white;
     padding: 15px 25px;
     text-decoration: none;
@@ -126,7 +126,7 @@
 
   #btn-cadastro input:hover {
     cursor: pointer;
-    background: #35880b;
+    background: #595959;
   }
  #formularioDestino {
   margin: 0 auto;
@@ -136,7 +136,7 @@
   justify-content: space-around;
   align-items: flex-start;
   padding: 20px;
-  background: linear-gradient(#ae92f0, rgb(146, 99, 144));
+  background: linear-gradient(#9a989f, rgb(50, 49, 49));
   border-radius: 10px;
   color: #ffffff;
 }
@@ -175,4 +175,29 @@
     width: 100%;
     margin-bottom: 8px;
   }
+}
+body  {
+    background-image: url('../img/bg.jpg');
+        background-size:cover;
+        -webkit-animation: slidein 100s;
+        animation: slidein 100s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;              
+}
+
+@-webkit-keyframes slidein {
+from {background-position: top; background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+}
+
+@keyframes slidein {
+from {background-position: top;background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
 }
