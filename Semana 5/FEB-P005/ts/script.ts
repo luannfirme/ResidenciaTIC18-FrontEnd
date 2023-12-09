@@ -2,19 +2,22 @@ async function ObterTemperaturaAtual() {
     try {
         const resposta = await fetch('https://api.openweathermap.org/data/3.0/onecall?lat=-14.796581726513459&lon=-39.173008679879025&exclude=minutely,hourly&units=metric&appid=70fd9d2c18a3ccd0fadf64377139e91d&lang=pt_br');
         const temperatura = await resposta.json();
-        const arrayTemperatura = temperatura.map((previsao: any) => previsao.current.common);
-        return arrayTemperatura;
+        const temperaturaAtual = temperatura.current.temp + 'ºC';
+        const descricaoTempoAtual = temperatura.current.weather[0].description;
+        const tempMaximaHoje = Math.round(temperatura.daily[0].temp.max) + 'ºC';
+        const tempMinimaHoje = Math.round(temperatura.daily[0].temp.min) + 'ºC';
+        return { temperaturaAtual, descricaoTempoAtual, tempMaximaHoje, tempMinimaHoje };
     }
     catch (error) {
         console.error('Erro com a chamada fetch: ', error);
     }
 }
 
-async function buscaLatLong(pais: String) {
+async function obterNoticias() {
     try {
-        const resposta = await fetch(`https://restcountries.com/v3.1/name/${pais}?fullText=true`);
-        const longLat = await resposta.json();
-        const coordenada = longLat.map((coordenada: any) => coordenada.latlng);
+        const resposta = await fetch('https://newsapi.org/v2/everything?sortBy=publishedAt&apiKey=e10349f1a5334964a73e16a7740b669a&q=Universidade Estadual de Santa Cruz&language=pt');
+        const noticias = await resposta.json();
+        const noticia = noticias.map((noticia: any) => noticia.latlng);
         console.log("Coordenada: " + coordenada[0]);
         return coordenada;
     }
@@ -23,18 +26,14 @@ async function buscaLatLong(pais: String) {
     }
 }
 
-async function TraduzirTexto(texto: String) {
-    const res = await fetch("https://libretranslate.com/translate", {
-        method: "POST",
-        body: JSON.stringify({
-            q: texto,
-            source: "en",
-            target: "pt"
-        }),
-        headers: { "Content-Type": "application/json" }
-    });
+const divNoticias = document.getElementById('listaNoticias');
+const divServicos = document.getElementById('listaServicos');
 
-    console.log(await res.json());
-}
-
-//  buscaPaises().then(paises => paises.forEach((elemento:any) => console.log("P==>: "+elemento)));
+ObterTemperaturaAtual().then(temp => {
+    const retornoTemperatura = `Temperatura atual: ${temp?.temperaturaAtual}<br>
+    ${temp?.descricaoTempoAtual}<br>
+    Máx.: ${temp?.tempMaximaHoje} &nbsp;&nbsp; Min.: ${temp?.tempMinimaHoje}<br>`;
+    if (divServicos) {
+        divServicos.innerHTML = retornoTemperatura;
+    }
+});
