@@ -1,0 +1,31 @@
+@media (min-width: 10px) {
+    #banner {
+        margin-top: -5px;
+    }
+}
+#banner {
+    background: url("../assets/img/new_topo_princ_uesc_01.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: center;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#rodape {
+    background-color: #010219;
+    color:#ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+}
