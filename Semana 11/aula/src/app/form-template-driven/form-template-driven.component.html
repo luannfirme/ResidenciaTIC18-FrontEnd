@@ -1,0 +1,16 @@
+<div class="form-container">
+    <form id="formLogin" (ngSubmit)="onSubmit(formulario)" #formulario="ngForm">
+        <label>
+            Usuário
+            <input name="login" id="login" maxlength="40" required ngModel login #login="ngModel">
+            <span *ngIf="!login.valid && login.touched">Escreva no máximo 40 caracteres</span>
+        </label>
+        <br>
+        <label>
+            Senha
+            <input type="password" name="senha" id="senha" minlength="4" maxlength="10" required ngModel senha #senha="ngModel">
+            <span *ngIf="!senha.valid && senha.touched">Escreva no minimo 3 e no máximo 10 caracteres</span>
+        </label>
+        <button type="submit">Enviar</button>
+    </form>
+</div>

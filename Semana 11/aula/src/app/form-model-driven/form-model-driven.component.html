@@ -1,0 +1,32 @@
+<form [formGroup]="aulaForm" (ngSubmit)="onSubmit()">
+    <label>
+        Nome da estação climática:
+        <input formControlName="Nome" name="Nome">
+        <span *ngIf="!aulaForm.get('Nome')?.valid && aulaForm.get('Nome')?.touched">Nome é requerido</span>
+    </label>
+    <br>
+    <label>
+        Email para notificação:
+        <input type="email" formControlName="Email" name="Email">
+        <span *ngIf="!aulaForm.get('Email')?.valid && aulaForm.get('Email')?.touched">Email inválido</span>
+    </label>
+    <br>
+    <label>
+        Localização:
+        <input formControlName="Localizacao" name="Localizacao">
+        <span *ngIf="!aulaForm.get('Localizacao')?.valid && aulaForm.get('Localizacao')?.touched">Localização é requerido</span>
+    </label>
+    <br>
+    <label>
+        Nome da estação climática:
+        <select formControlName="Status" name="Status">
+            <option></option>
+            <option value="Não instalada">Não instalada</option>
+            <option value="Instalada">Instalada</option>
+            <option value="Operante">Operante</option>
+        </select>
+        <span *ngIf="!aulaForm.get('Status')?.valid && aulaForm.get('Status')?.touched">Status é requerido</span>
+    </label>
+    <br>
+    <button type="submit">Enviar</button>
+</form>
