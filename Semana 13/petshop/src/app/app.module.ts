@@ -13,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {NgToastModule} from 'ng-angular-popup';
 import { ExcluirAtendimentoComponent } from './excluir-atendimento/excluir-atendimento.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getAuth, provideAuth } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { ExcluirAtendimentoComponent } from './excluir-atendimento/excluir-atend
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgToastModule
+    NgToastModule,
+    provideFirebaseApp(() => initializeApp({"projectId":"residencia-8614e","appId":"1:537158270080:web:01529410f272ceac0eba65","databaseURL":"https://residencia-8614e-default-rtdb.firebaseio.com","storageBucket":"residencia-8614e.appspot.com","apiKey":"AIzaSyAEu1bIIgG98fMysMjtnP_vDbCrmDSMg-k","authDomain":"residencia-8614e.firebaseapp.com","messagingSenderId":"537158270080","measurementId":"G-V57QY1Y99M"})),
+    provideAuth(() => getAuth())
   ],
   providers: [],
   bootstrap: [AppComponent]
