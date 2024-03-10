@@ -39,13 +39,13 @@ export class EdicaoAtendimentoComponent implements OnInit {
     this.dbService.getAtendimentoById(this.atendimentoId).subscribe(
       (response) => {
         const atendimento = response;
-        atendimento.raca = atendimento.raca || ''; // Define valor vazio para raça se estiver vazia
+        atendimento.raca = atendimento.raca || '';
         this.atendimentoForm.setValue(atendimento);
       },
       (error) => {
         this.toast.error({ detail: 'Falha !!!', summary: error, sticky: true, position: 'bottomRight', duration: 5000 });
         setTimeout(() => {
-          this.router.navigate(['listar']);
+          this.router.navigate(['/main/listar']);
         })
       }
     )

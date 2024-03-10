@@ -29,7 +29,7 @@ export class DetalhamentoAtendimentoComponent implements OnInit {
       (error) => {
         this.toast.error({ detail: 'Falha !!!', summary: error, sticky: true, position: 'bottomRight', duration: 5000 });
         setTimeout(() => {
-          this.router.navigate(['listar']);
+          this.router.navigate(['/main/listar']);
         })
       }
     )

@@ -15,6 +15,10 @@ import {NgToastModule} from 'ng-angular-popup';
 import { ExcluirAtendimentoComponent } from './excluir-atendimento/excluir-atendimento.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
+import { MainComponent } from './main/main.component';
+import { LoginComponent } from './login/login.component';
+import { RegistrarComponent } from './registrar/registrar.component';
+import { AngularFireModule } from '@angular/fire/compat';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,10 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
     DetalhamentoAtendimentoComponent,
     EdicaoAtendimentoComponent,
     HomeComponent,
-    ExcluirAtendimentoComponent
+    ExcluirAtendimentoComponent,
+    MainComponent,
+    LoginComponent,
+    RegistrarComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +42,8 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
     HttpClientModule,
     NgToastModule,
     provideFirebaseApp(() => initializeApp({"projectId":"residencia-8614e","appId":"1:537158270080:web:01529410f272ceac0eba65","databaseURL":"https://residencia-8614e-default-rtdb.firebaseio.com","storageBucket":"residencia-8614e.appspot.com","apiKey":"AIzaSyAEu1bIIgG98fMysMjtnP_vDbCrmDSMg-k","authDomain":"residencia-8614e.firebaseapp.com","messagingSenderId":"537158270080","measurementId":"G-V57QY1Y99M"})),
-    provideAuth(() => getAuth())
+    provideAuth(() => getAuth()),
+    AngularFireModule.initializeApp({"projectId":"residencia-8614e","appId":"1:537158270080:web:01529410f272ceac0eba65","databaseURL":"https://residencia-8614e-default-rtdb.firebaseio.com","storageBucket":"residencia-8614e.appspot.com","apiKey":"AIzaSyAEu1bIIgG98fMysMjtnP_vDbCrmDSMg-k","authDomain":"residencia-8614e.firebaseapp.com","messagingSenderId":"537158270080","measurementId":"G-V57QY1Y99M"})
   ],
   providers: [],
   bootstrap: [AppComponent]

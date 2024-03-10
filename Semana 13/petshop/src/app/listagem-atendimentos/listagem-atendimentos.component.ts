@@ -53,7 +53,7 @@ export class ListagemAtendimentosComponent implements OnInit {
       (response) => {
         const index = this.listaAtendimentos.findIndex(a => a.id === atendimentoId);
         if (index !== -1) {
-          this.listaAtendimentos.splice(index, 1); // Remove o atendimento da lista local
+          this.listaAtendimentos.splice(index, 1);
         }
         this.toast.success({ detail: 'Sucesso !!!', summary: 'Atendimento excluído com sucesso', sticky: true, position: 'bottomRight', duration: 5000 })
       },

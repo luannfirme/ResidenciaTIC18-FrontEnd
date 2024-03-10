@@ -1,0 +1,31 @@
+<br>
+<div>
+<div class="row mt-5" id="card">
+    <div class="col-xl-6 col-lg-6">
+        <div class="card text-white bg-dark shadow mb-4">
+            <div class="card-body col-xl-auto col-lg-6">
+                <div class="text-center pt-5">
+                    <img src="assets/logo.png" width="15%">
+                    <h3>Pet Shop - <b>Login</b></h3>
+                </div>
+                <br>
+                <div class="form-group">
+                    <b>E-mail<font class="text-danger">*</font></b><br />
+                    <input class="form-control w-100" type="email" name="email" id="email"
+                        placeholder="example@email.com" #email required />
+                </div>
+                <div class="form-group">
+                    <b>Senha<font class="text-danger">*</font></b><br />
+                    <input class="form-control w-100" type="password" name="password" id="password"
+                        placeholder="••••••••" #password required />
+                </div>
+                <br>
+                <button type="click" class="btn btn-primary" (click)="logIn(email.value, password.value)">Salvar</button>
+                <br>
+                <br>
+                <font size="2">Não tem uma conta? </font>
+                <a href="#" class="text-primary-600" routerLink="/registrar">Registre-se</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -26,10 +26,10 @@
               <td>{{ atendimento.sexo }}</td>
               <td>{{ atendimento.cor.toUpperCase() }}</td>
               <td>
-                <a [routerLink]="['/visualizar', atendimento.id]" class="text-primary cursorPointer"
+                <a [routerLink]="['/main/visualizar', atendimento.id]" class="text-primary cursorPointer"
                   title="Visualizar"><i class="fa fa-eye fa-lg" aria-hidden="true"></i></a>
                 &nbsp;&nbsp;&nbsp;
-                <a [routerLink]="['/editar', atendimento.id]" class="text-primary cursorPointer"
+                <a [routerLink]="['/main/editar', atendimento.id]" class="text-primary cursorPointer"
                   title="Editar">
                 <i class="fa fa-pencil-square fa-lg" aria-hidden="true"></i>
                 </a>
