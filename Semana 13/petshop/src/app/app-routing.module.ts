@@ -5,6 +5,7 @@ import { ListagemAtendimentosComponent } from './listagem-atendimentos/listagem-
 import { CadastroAtendimentoComponent } from './cadastro-atendimento/cadastro-atendimento.component';
 import { EdicaoAtendimentoComponent } from './edicao-atendimento/edicao-atendimento.component';
 import { DetalhamentoAtendimentoComponent } from './detalhamento-atendimento/detalhamento-atendimento.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'cadastrar',component:CadastroAtendimentoComponent},
   {path:'editar/:id',component:EdicaoAtendimentoComponent},
   {path:'visualizar/:id',component:DetalhamentoAtendimentoComponent},
+  {path:'/login',component:LoginComponent}
 ];
 
 @NgModule({
