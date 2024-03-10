@@ -1,0 +1,13 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Confirmação de exclusão</h4>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+        (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+    <p>Tem certeza que deseja excluir este atendimento?</p>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary"
+        (click)="activeModal.dismiss('Cancel click')">Cancelar</button>
+    <button type="button" class="btn btn-danger" (click)="activeModal.close('Confirm click')">Sim</button>
+</div>

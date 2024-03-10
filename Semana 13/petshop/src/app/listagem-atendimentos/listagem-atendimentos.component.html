@@ -1,1 +1,49 @@
-<p>listagem-atendimentos works!</p>
+<br>
+<div class="row">
+  <div class="col-xl-12 col-lg-12">
+    <div class="card shadow mb-4">
+      <div class="card-body col-xl-auto col-lg-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col-1">#</th>
+              <th scope="col">Espécie</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Raça</th>
+              <th scope="col-1">Idade</th>
+              <th scope="col">Sexo</th>
+              <th scope="col">Cor</th>
+              <th scope="col-1"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let atendimento of listaAtendimentos; let i = index">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ atendimento.especie.toUpperCase() }}</td>
+              <td>{{ atendimento.nome.toUpperCase() }}</td>
+              <td>{{ atendimento.raca?.toUpperCase() }}</td>
+              <td>{{ atendimento.idade }}</td>
+              <td>{{ atendimento.sexo }}</td>
+              <td>{{ atendimento.cor.toUpperCase() }}</td>
+              <td>
+                <a [routerLink]="['/visualizar', atendimento.id]" class="text-primary cursorPointer"
+                  title="Visualizar"><i class="fa fa-eye fa-lg" aria-hidden="true"></i></a>
+                &nbsp;&nbsp;&nbsp;
+                <a [routerLink]="['/editar', atendimento.id]" class="text-primary cursorPointer"
+                  title="Editar">
+                <i class="fa fa-pencil-square fa-lg" aria-hidden="true"></i>
+                </a>
+                &nbsp;&nbsp;&nbsp;
+                <a  (click)="openConfirmModal(atendimento.id ?? '')" class="text-danger cursorPointer" title="Excluir">
+                  <i class="fa fa-trash fa-lg" aria-hidden="true"></i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-toast></ng-toast>
