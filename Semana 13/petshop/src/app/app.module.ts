@@ -13,7 +13,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {NgToastModule} from 'ng-angular-popup';
 import { ExcluirAtendimentoComponent } from './excluir-atendimento/excluir-atendimento.component';
-import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +22,7 @@ import { LoginComponent } from './login/login.component';
     DetalhamentoAtendimentoComponent,
     EdicaoAtendimentoComponent,
     HomeComponent,
-    ExcluirAtendimentoComponent,
-    LoginComponent
+    ExcluirAtendimentoComponent
   ],
   imports: [
     BrowserModule,
